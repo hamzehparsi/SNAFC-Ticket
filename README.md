@@ -1,2 +1,3 @@
-# gulp-es6
-Gulpfile setup for Javascript ES6 compiling, plus SCSS, images, and fonts handling
+# SNAFC template sell ticketing
+
+Exclusive template for ticket sales website for Abadan Oil Industry Club
