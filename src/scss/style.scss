@@ -1,0 +1,1031 @@
+@import "semantic.scss";
+@import "fontiran.scss";
+$mygreen : #006837;
+$talaee : #ffcd00;
+@mixin transition() {
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.ui.centered.grid > .column:not(.aligned):not(.justified):not(.row), .ui.centered.grid > .row > .column:not(.aligned):not(.justified), .ui.grid .centered.row > .column:not(.aligned):not(.justified) {
+    text-align: right!important;
+}
+body {
+    font-family: IRANSans !important;
+    color: #505962;
+    overflow-x: hidden;
+    direction: rtl;
+}
+h1, h2, h3, h4, h5, h6,input, textarea, .button, a {
+	font-family: IRANSans !important;
+}
+input[type="text"] {
+    border-radius: 28px!important;
+    border: 1px solid #99cab5!important;
+    letter-spacing: -0.6px;
+    font-size: 10pt!important;
+    font-weight: 100;
+    padding-right: 22px!important;
+}
+label {
+    margin-bottom: -10px!important;
+    position: relative;
+    margin-right: 15px!important;
+    background: white!important;
+    display: inline-block!important;
+    top: 10px!important;
+    padding: 2px 7px!important;
+    border-radius: 28px!important;
+    color: $mygreen!important;
+    /* border: 1px solid white; */
+    font-size: 9pt!important;
+    font-weight: 400!important;
+}
+.ui.dividing.header {
+    padding-bottom: .21428571rem;
+    border-bottom: 0!important;
+    margin-bottom: 0px!important;
+    margin-right: 5px!important;
+    color: #1b8b56!important;
+}
+// .ui.radio.checkbox .box:before, .ui.radio.checkbox label:before {
+//     left: inherit;
+//     right: 0;
+// }
+// .ui.radio.checkbox .box, .ui.radio.checkbox label {
+//     padding-right: 1.85714em;
+//     padding-left: inherit;
+// }
+html[dir='rtl'] {
+    div,h1, h2, h3, h4, h5, h6,span,a,p{
+        font-family: inherit;
+    }
+    h3.ui.header{
+        font-family: inherit;
+        line-height: 1.2;	
+    }
+    .ui.comments .comment .avatar{
+        float: right;
+        margin: 0.2em 6px 0px;
+    }
+    .ui.top.right.attached.label{
+        right: 255px!important;
+    }
+    .ui.message>.close.icon{
+        top: .99575em;
+        right: inherit;
+        left: 0.9em;
+    }
+    fieldset.collapsed .fieldset-legend{
+        background-image: none!important;
+    }
+    .ui.selection.dropdown>.delete.icon, .ui.selection.dropdown>.dropdown.icon, .ui.selection.dropdown>.search.icon{
+        right: inherit;
+        left: 0px;
+            top: 0px;
+    }
+    .ui.dropdown{
+        text-align: right;
+    }
+    .ui.table{
+        text-align: right;
+    }
+    .ui.dropdown .menu > .item{
+        text-align: right;
+    }
+    .ui.dropdown .menu .selected.item, .ui.dropdown.selected{
+        text-align: right;
+    }
+    p.description {
+        color: #858585;
+        font-size: 11px;
+        margin: 5px 2px 0px 0px!important;
+    }
+    .ui.dropdown .menu .active.item{
+        font-weight: normal!important;
+    }
+    .ui.tabular.menu .active.item{
+        font-weight: bold!important;	
+    }
+    .admin.clearfix h3 {
+    }
+    .ui.checkbox .box:before, .ui.checkbox label:before{
+        right: 0;
+    }
+
+    i.icon{
+        margin: 0px 0.25rem 0px 6px!important;
+    }
+    .ui.horizontal.list:not(.celled) > .item:first-child {
+        margin-right: 0px !important;
+        padding-right: 0px !important;
+    }
+    .ui.checkbox input.hidden+label{
+        padding-right: 25px!important;
+    }
+    .ui.checkbox .box:after, .ui.checkbox label:after{
+        right: 1px;
+    }
+    .ui.radio.checkbox .box:after, .ui.radio.checkbox label:after{
+        top: 1px;
+    right: 0;
+    }
+    fieldset.collapsible .fieldset-legend{
+        padding-right: 0!important;
+    }
+    #simplenews-admin-filter .form-item label {
+        float: right;
+    }
+    #toolbar ul#toolbar-user li {
+        float: right; 
+    }
+    #toolbar ul li.home a {
+        position: absolute;
+        right: -35px;
+    }
+    div#toolbar div.toolbar-shortcuts ul {
+        height: 32px;
+    }
+    #toolbar a{
+        margin-left: 3px;
+    }
+    span.fieldset-legend{
+        margin-right: -10px;
+    }
+    #edit-submit.ui.button {
+        margin: 22px 2.25em 0px 27px!important;
+    }
+    i.link.icon{
+        float: right;
+    }
+    .ui.vertical.tabular.menu{
+        border-left: 1px solid #d4d4d5;
+        border-right: 0px;
+    }
+    .ui.vertical.tabular.menu .active.item{
+        margin: 0px 1px 0px -2px;
+    }
+    .ui.grid>[class*="twelve wide"].column {
+        width: 73%!important;
+        margin-right: 6px;
+    }
+    .ui.vertical.tabular.menu .active.item{
+        border-color: transparent;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        border-right: 2px solid #767676;
+    }
+    .ui.checkbox input.hidden {
+        z-index: 1;
+    }
+    .ui.checkbox input[type=checkbox], .ui.checkbox input[type=radio] {
+        left: inherit;
+        right: 12px!important;
+        top: 11px;
+    }
+}
+
+
+/* nav scrolling Offset */
+.offset::before {
+    height: 4rem;
+    margin-top: -4rem;
+    content: '';
+    display: block;
+}
+/* extra bootstrap padding column */
+/* [class*='col-'] { */
+    /* padding: 1rem!important; */
+    /* background-color: slategrey;
+    border: 1px solid white; */
+/* } */
+.text-centered{
+    text-align: center!important;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.overflow-hidden{
+    overflow: hidden;
+}
+/* header */
+#header {
+    background: $talaee;
+    padding: 1rem 0 3rem;
+}
+.fixed {
+    background: $talaee;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.top-menu {
+    position: fixed;
+    width: 100%;
+    z-index: 111;
+    top: 0px;
+    padding: 7px 0px 0px;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+/* navbar */
+img.top-menu-user-icon {
+    width: 3rem!important;
+    padding-top: .6rem;
+    padding-left: 1rem;
+}
+img.top-menu-logo-icon {
+    width: 3rem;
+    padding: .3rem;
+}
+img.top-menu-nav-icon {
+    width: 3rem!important;
+    padding-top: .7rem;
+    padding-right: 1rem;
+}
+/* content */
+#content-ticket {
+    background: white;
+    border-radius: 28px 28px 0 0;
+    margin-top: -26px;
+    box-shadow: 0px -8px 8px 0px #efc104;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+#content-front {
+    background: white;
+    border-radius: 28px 28px 0 0;
+    margin-top: -26px;
+    box-shadow: 0px -8px 8px 0px #efc104;
+    padding-top: 30px;
+    p{
+        color: #999999;
+        font-size: 11pt;
+        text-align: center;
+        line-height: 1.7;
+    }
+}
+.page-title {
+    font-size: 2rem;
+    margin-bottom: -1.5rem;
+    color: #006837;
+    padding-top: 3rem;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+.page-subtitle {
+    font-size: 1.3rem;
+    color: $mygreen;
+    letter-spacing: -1px;
+    font-weight: 400;
+    background-color: #ffcd00!important;
+}
+.page-title-profile {
+    font-size: 19pt;
+    margin-bottom: -1.5rem;
+    color: #006837;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+h5.page-subtitle-profile {
+    color: white;
+    font-size: 9pt;
+}
+#content-front .ui.buttons {
+    width: 100%;
+    margin-bottom: 25px;
+}
+a.button.ui.labeled.icon.button.btn-mystyle {
+    background: $talaee;
+    border-radius: 28px;
+    color:white;
+    padding-right: 50px!important;
+}
+.btn-mystyle img {
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    left: 9px;
+    background: #ffdd52;
+    padding: 5px 8px 5px 5px;
+    top: 5px;
+    border-radius: 28px 28px 28px 28px;
+}
+.image-profile {
+    margin: 0 auto;
+    margin-top: -10px;
+    margin-bottom: -15px;
+}
+img.image-profile {
+    width: 125px!important;
+    height: auto;
+    border: 10px solid #f5c70d;
+}
+#profile-menu {
+    .ui.image {
+        width: 2rem!important;
+        border-radius: 0;
+        margin: 7px;
+    }
+    .content {
+        line-height: 3.142857em;
+        color: #999999;
+    }
+}
+#content-title {
+    padding-top: 90px;
+}
+.ticket-segment {
+    border-radius: 23px;
+    box-shadow: 0 0 8px 0 hsla(0, 0%, 90%, 0.42);
+    margin-bottom: 20px!important;
+    @include transition();
+    &:hover{
+        background: #ffcd0038;
+    }
+    h6 {
+        margin: 0;
+    }
+    .ticket-left {
+        position: relative;
+        // .column{
+        //     padding: 0px!important;
+        // }
+        .up-border {
+            position: absolute;
+            right: -11px;
+            box-shadow: inset 0px -3px 8px 0 hsla(0,0%,90.2%,.48);
+            background-color: white;
+            z-index: 1;
+            height: 10px;
+            width: 20px;
+            border-bottom-left-radius: 90px;
+            border-bottom-right-radius: 90px;
+            top: -15px;
+        }
+        .down-border {
+            position: absolute;
+            right: -11px;
+            box-shadow: inset 0px 3px 8px 0 hsla(0,0%,90.2%,.48);
+            background-color: white;
+            z-index: 1;
+            height: 10px;
+            width: 20px;
+            border-top-left-radius: 90px;
+            border-top-right-radius: 90px;
+            bottom: -15px;
+        }
+    }
+    
+    img.lig-logo {
+        width: 100%;
+        margin-top: 25%;
+    }
+    img.team-logo {
+        width: 80%;
+    }
+    .date-game {
+        font-size: 6.5pt;
+        background: $mygreen;
+        border-radius: 28px;
+        padding: 0 3px;
+        color: white;
+    }
+    h6.lig-name {
+        color: #808080;
+    }
+    .vs-column {
+        padding-top: 30px;
+        color: #999999;
+    }
+    h6.team-name {
+        color: #999999;
+    }
+}
+.ticket-right {
+    padding-top: 20px!important;
+}
+#game-preview-segment {
+    padding-top: 70px;
+    h6.lig-name {
+        margin: 0!important;
+        font-size: 6pt;
+        color: $mygreen;
+    }
+    .vs-column {
+        padding-top: 45px;
+    }
+    h6.team-name {
+        margin: 0;
+        color: white;
+    }
+    .vs-game {
+        color: $mygreen;
+        font-size: 23pt;
+        font-weight: 400;
+    }
+}
+#game-preview-data {
+    .column {
+        padding: 0;
+    }
+    .ui.label {
+        background: transparent;
+        font-size: 8pt;
+        color: #808080;
+        font-weight: 400;
+        line-height: 3;
+    }
+    img.ui.image {
+        display: inline-block;
+        margin-left: 7px;
+    }
+    .item-data-game {
+        border-bottom: 1px solid #ddd;
+        padding: 0px 0 !important;
+    }
+}
+.myflex-parent {
+    height: 400px;
+    width: 600px;
+    margin: auto;
+    border: 2px solid #EEE;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.myflex-child {
+    background: rebeccapurple;
+    padding: 0px 15px;
+    font-size: 40px;
+    text-align: center;
+    line-height: 132px;
+    color: #FFFFFF;
+}
+.block-select {
+    .column {
+        // width: 5%!important;
+        padding: 0px!important;
+        margin: 2px;
+        text-align: center!important;
+    }
+    .reservable {
+        border: 1px solid rgba(0,122,69,.21);
+        border-radius: 5px;
+        color: #1b8b56;
+        height: 50px;
+        font-weight: 500;
+        align-items: center;
+        align-content: center;
+        display: flex!important;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .unreservable {
+        background-color: #3f9843;
+        border-radius: 5px;
+        color: white;
+        height: 50px;
+        font-weight: 500;
+        align-items: center;
+        align-content: center;
+        display: flex!important;
+        justify-content: center;
+    }
+    .ui.centered.grid .column{
+        text-align: center!important;
+    }
+    .vip-set{
+        border: 1px solid rgb(255, 205, 0);
+    }
+    .unreservable.vip-set {
+        background: $talaee;
+    }
+}
+#block-select .ui.centered.grid>.column:not(.aligned):not(.justified):not(.row), .ui.centered.grid>.row>.column:not(.aligned):not(.justified), .ui.grid .centered.row>.column:not(.aligned):not(.justified) {
+    text-align: center!important;
+}
+#blocks-name h4 {
+    font-size: 10pt;
+    letter-spacing: -.5px;
+    margin-bottom: -46px!important;
+    color: $mygreen;
+}
+.top-set {
+    height: 25px!important;
+}
+.middle-set {
+    height: 25px!important;
+    margin-top: 13px!important;
+}
+.bottom-set {
+    height: 25px!important;
+}
+.block-bottom {
+    align-items: flex-end!important;
+}
+.reservable-set {
+    border: 1px solid rgba(0,122,69,.21);
+    border-radius: 8px;
+    height: 55px;
+}
+h4.reserable-set {
+    font-size: 7pt!important;
+}
+.guid-set-res {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    h4.reserable-set {
+        align-items: center;
+        margin-top: 0;
+        font-size: 7pt!important;
+        margin-right: 5px;
+        color: #007a4596;
+    }
+    .block-set-guid {
+        border: 1px solid #d3e8df;
+        border-radius: 5px;
+        color: #1b8b56;
+        width: 20px;
+        height: 45px;
+    }
+    .block-seted-guid {
+        background-color: #3f9843;
+        border-radius: 5px;
+        color: #1b8b56;
+        width: 20px;
+        height: 45px;
+    }
+    .block-setvip-guid {
+        background-color: $talaee;
+        border-radius: 5px;
+        color: #1b8b56;
+        width: 20px;
+        height: 45px;
+    }
+}
+#guid-set-color {
+    margin: 15px 0;
+    border-top: 1px solid #ddd6;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    .column {
+        // width: 5%!important;
+        padding: 0px!important;
+        margin: 0px;
+        text-align: center!important;
+    }
+}
+#btn-link {
+    padding-bottom: 15px;
+}
+#seat-select {
+    .row {
+        padding-top: 0px!important;
+        padding-bottom: 0px!important;
+        align-items: center;
+    }
+    .row-name-seat {
+        font-size: 8pt;
+        width: 10px;
+        /* background: darkgrey; */
+        text-align: center;
+        align-items: center;
+        color: #939393;
+    }
+    .column {
+        width: 5.4%!important;
+        padding: 0px!important;
+        margin: 1px;
+        text-align: center!important;
+    }
+    .reservable {
+        background-color: #99cab5;
+        height: 19px;
+        border-radius: 5px;
+    }
+    .unreservable {
+        cursor: pointer;
+        background-color: white;
+        height: 19px;
+        border-radius: 5px;
+        border:1px solid #99cab5;
+    }
+    .selected-seat {
+        background-color: #1b8b56;
+        height: 19px;
+        border-radius: 5px;
+    }
+}
+#guid-set-seat {
+    border-top: 1px solid hsla(0,0%,86.7%,.4);
+    /* padding-bottom: 10px; */
+    margin-top: 35px;
+    .column {
+        text-align: right!important;
+    }
+    .seat-set-guid {
+        border: 1px solid #99cab5;
+        border-radius: 5px;
+        color: #1b8b56;
+        width: 25px;
+        height: 19px;
+    }
+    .seat-seted-guid {
+        background-color: #99cab5;
+        border-radius: 5px;
+        color: #1b8b56;
+        width: 25px;
+        height: 19px;
+    }
+    .seat-selled-guid {
+        background-color: #3f9843;
+        border-radius: 5px;
+        color: #1b8b56;
+        width: 25px;
+        height: 19px;
+    }
+}
+#blocks-name-select-seat {
+    margin-bottom: 10px;
+    h4 {
+    font-size: 10pt;
+    letter-spacing: -.5px;
+    margin-bottom: -15px!important;
+    color: #1b8b56;
+    border: 1px solid #99cab580;
+    padding: 11px;
+    border-radius: 44px;
+    
+    }
+}
+#blocks-name-set-family h4 {
+    font-size: 10pt;
+    letter-spacing: -.5px;
+    margin-bottom: -10px!important;
+    color: white;
+    border: 0;
+    padding: 11px;
+    border-radius: 44px;
+    background: #1b8b56;
+}
+.ticket-props {
+    border-radius: 123px;
+    box-shadow: 0 0 8px 0 hsla(0,0%,90.2%,.42);
+    margin-bottom: 20px!important;
+    transition: all .5s ease;
+    .column {
+        padding-top: 2px!important;
+        padding-bottom: 2px!important;
+    }
+}
+h6.seat-prop-row {
+    background: #1b8b56;
+    border-radius: 100%;
+    align-content: center;
+    justify-content: center;
+    padding: 4px 14px;
+    width: 20px;
+    height: 28px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+h5.seat-prop-name {
+    color: #007a45;
+    margin: 10px 10px 0px 0!important;
+    line-height: 2;
+    margin-bottom: -10px!important;
+}
+h6.seat-prop-code {
+    margin: 10px 10px 0px 0!important;
+    color: #007a45;
+    font-size: 11pt;
+    font-weight: 400;
+}
+.left-prop {
+    display: flex;
+    align-items: center;
+}
+img.delete-icon {
+    width: 19px;
+    margin-right: 3px;
+}
+h6.edit-prop {
+    padding: 0 7px;
+    color: #bdbdbd;
+    font-size: 8pt;
+}
+span.middle-border {
+    width: 2px;
+    background: #ddd;
+    height: 16px;
+    margin-left: 2px;
+}
+.price {
+    margin-top: -18px!important;
+    background: #e6e6e6;
+    border-radius: 0 0 28px 28px;
+    position: relative!important;
+    z-index: 0;
+    padding-top: 4px!important;
+    padding-bottom: 7px!important;
+    color: #808080;
+    h6 {
+        font-size: 9pt;
+        margin: 0;
+        color: #607D8B;
+        font-weight: 400;
+    }
+}
+.price .column {
+    padding: 0!important;
+}
+#content-modal {
+    a.item {
+    text-align: right!important;
+    border-bottom: 1px solid hsl(0, 0%, 41%)!important;
+    }
+    .content {
+        line-height: 3.142857em;
+        color: #9e9e9e;
+    }
+}
+.col-num {
+    font-size: 8pt;
+    
+    color: #939393;
+}
+.des-seat {
+    float: right;
+    margin-top: 1px!important;
+    margin-left: 5px!important;
+}
+span.props-dest-seat {
+    font-size: 10pt;
+    color: #888;
+    letter-spacing: -.7px;
+}
+.row-family-prop {
+    margin-bottom: 35px;
+}
+form.ui.form {
+    margin: 20px 0;
+}
+.ui.buttons {
+    width: 100%;
+}
+#btn-link-page {
+    margin: 30px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
+    [class*="mobile hidden"],
+    [class*="tablet only"]:not(.mobile),
+    [class*="computer only"]:not(.mobile),
+    [class*="large screen only"]:not(.mobile),
+    [class*="widescreen only"]:not(.mobile),
+    [class*="or lower hidden"] {
+      display: none !important;
+    }
+  }
+  
+  /* Tablet / iPad Portrait */
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    [class*="mobile only"]:not(.tablet),
+    [class*="tablet hidden"],
+    [class*="computer only"]:not(.tablet),
+    [class*="large screen only"]:not(.tablet),
+    [class*="widescreen only"]:not(.tablet),
+    [class*="or lower hidden"]:not(.mobile) {
+      display: none !important;
+    }
+    .reservable {
+        height: 40px!important;
+        border-radius: 12px!important;
+    }
+    .unreservable {
+        height: 40px!important;
+        border-radius: 12px!important;
+    }
+    .seat-set-guid {
+        width: 40px!important;
+        height: 40px!important;
+        border-radius: 12px!important;
+    }
+    .seat-seted-guid {
+        width: 40px!important;
+        height: 40px!important;
+        border-radius: 12px!important;
+    }
+    .seat-selled-guid {
+        width: 40px!important;
+        height: 40px!important;
+        border-radius: 12px!important;
+    }
+    .reservable {
+        border-radius: 10px!important;
+        height: 40px!important;
+        
+    }
+    .unreservable {
+        border-radius: 10px!important;
+        height: 40px!important;
+        
+    }
+    .middle-set,.bottom-set {
+        height: 26px!important;
+        border-radius: 7px !important;
+    }
+    .ticket-segment .date-game{
+        font-size: 8.5pt;
+    }
+    .ticket-segment .vs-column {
+        padding-top: 60px;
+    }
+    #game-preview-segment h6.team-name {
+        font-size: 14px!important;
+    }
+    .vs-column {
+        padding-top: 80px!important;
+    }
+  }
+  
+  /* Computer / Desktop / iPad Landscape */
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    [class*="mobile only"]:not(.computer),
+    [class*="tablet only"]:not(.computer),
+    [class*="computer hidden"],
+    [class*="large screen only"]:not(.computer),
+    [class*="widescreen only"]:not(.computer),
+    [class*="or lower hidden"]:not(.tablet):not(.mobile) {
+      display: none !important;
+    }
+    .reservable {
+        height: 50px!important;
+        border-radius: 12px!important;
+    }
+    .unreservable {
+        height: 50px!important;
+        border-radius: 12px!important;
+    }
+    .seat-set-guid {
+        width: 50px!important;
+        height: 50px!important;
+        border-radius: 12px!important;
+    }
+    .seat-seted-guid {
+        width: 50px!important;
+        height: 50px!important;
+        border-radius: 12px!important;
+    }
+    .seat-selled-guid {
+        width: 50px!important;
+        height: 50px!important;
+        border-radius: 12px!important;
+    }
+    .row-name-seat {
+        width: 40px!important;
+    }
+    .reservable {
+        border-radius: 10px!important;
+        height: 50px!important;
+        
+    }
+    .unreservable {
+        border-radius: 10px!important;
+        height: 50px!important;
+        
+    }
+    .middle-set,.bottom-set {
+        height: 26px!important;
+        border-radius: 7px !important;
+    }
+    .ticket-segment .date-game{
+        font-size: 8.5pt;
+    }
+    .ticket-segment .vs-column {
+        padding-top: 60px;
+    }
+    #game-preview-segment h6.team-name {
+        font-size: 14px!important;
+    }
+    .vs-column {
+        padding-top: 80px!important;
+    }
+    .ticket-segment .date-game {
+        font-size: 8.5pt!important;
+    }
+  }
+  
+  /* Large Monitor */
+  @media only screen and (min-width: 1200px) and (max-width: 1919px) {
+    [class*="mobile only"]:not([class*="large screen"]),
+    [class*="tablet only"]:not([class*="large screen"]),
+    [class*="computer only"]:not([class*="large screen"]),
+    [class*="large screen hidden"],
+    [class*="widescreen only"]:not([class*="large screen"]),
+    [class*="or lower hidden"]:not(.computer):not(.tablet):not(.mobile) {
+      display: none !important;
+    }
+    .reservable {
+        height: 60px!important;
+        border-radius: 12px!important;
+    }
+    .unreservable {
+        height: 60px!important;
+        border-radius: 12px!important;
+    }
+    .seat-set-guid {
+        width: 60px!important;
+        height: 60px!important;
+        border-radius: 12px!important;
+    }
+    .seat-seted-guid {
+        width: 60px!important;
+        height: 60px!important;
+        border-radius: 12px!important;
+    }
+    .seat-selled-guid {
+        width: 60px!important;
+        height: 60px!important;
+        border-radius: 12px!important;
+    }
+    #seat-select .row-name-seat {
+        width: 55px;
+    }
+    .reservable {
+        border-radius: 10px!important;
+        height: 60px!important;
+        
+    }
+    .unreservable {
+        border-radius: 10px!important;
+        height: 60px!important;
+        
+    }
+    .middle-set,.bottom-set {
+        height: 30px!important;
+        border-radius: 7px !important;
+    }
+    #game-preview-segment h6.team-name {
+        font-size: 14px!important;
+    }
+    .vs-column {
+        padding-top: 80px!important;
+    }
+    .ticket-segment .date-game {
+        font-size: 8.5pt!important;
+    }
+  }
+  
+  /* Widescreen Monitor */
+  @media only screen and (min-width: 1920px) {
+    [class*="mobile only"]:not([class*="widescreen"]),
+    [class*="tablet only"]:not([class*="widescreen"]),
+    [class*="computer only"]:not([class*="widescreen"]),
+    [class*="large screen only"]:not([class*="widescreen"]),
+    [class*="widescreen hidden"],
+    [class*="widescreen or lower hidden"] {
+      display: none !important;
+    }
+    .ticket-segment .date-game {
+        font-size: 8.5pt!important;
+    }
+  }
