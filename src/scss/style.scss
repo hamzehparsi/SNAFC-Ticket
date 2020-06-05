@@ -613,26 +613,26 @@ h4.reserable-set {
         color: #939393;
     }
     .column {
-        width: 5.1%!important;
+        width: 4.6%!important;
         padding: 0px!important;
         margin: 1px;
         text-align: center!important;
     }
     .reservable {
         background-color: #99cab5;
-        height: 16px;
-        border-radius: 5px;
+        height: 13px;
+        border-radius: 3px;
     }
     .unreservable {
         cursor: pointer;
         background-color: white;
-        height: 16px;
-        border-radius: 5px;
+        height: 13px;
+        border-radius: 3px;
         border:1px solid #99cab5;
     }
     .selected-seat {
         background-color: #1b8b56;
-        border-radius: 5px;
+        border-radius: 3px;
     }
 }
 #guid-set-seat {
@@ -932,15 +932,15 @@ form.ui.form {
     }
     #seat-select .reservable {
         border-radius: 5px !important;
-        height: 21px !important;
+        height: 24px !important;
     }
     #seat-select .unreservable {
         border-radius: 5px !important;
-        height: 21px !important;
+        height: 24px !important;
     }
     .seat-set-guid {
         width: 21px!important;
-        height: 21px!important;
+        height: 24px!important;
         border-radius: 5px!important;
     }
     .seat-seted-guid {
@@ -996,15 +996,15 @@ form.ui.form {
     }
     #seat-select .reservable {
         border-radius: 5px !important;
-        height: 21px !important;
+        height: 24px !important;
     }
     #seat-select .unreservable {
         border-radius: 5px !important;
-        height: 21px !important;
+        height: 24px !important;
     }
     .seat-set-guid {
         width: 21px!important;
-        height: 21px!important;
+        height: 24px!important;
         border-radius: 5px!important;
     }
     .seat-seted-guid {
