@@ -55,6 +55,6 @@
 	"dependencies": {
 		"browserslist": "^4.11.1",
 		"caniuse-lite": "^1.0.30001039",
-		"node-sass": "^4.14.1"
+		"node-sass": "^7.0.0"
 	}
 }
